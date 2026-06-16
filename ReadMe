@@ -1,0 +1,34 @@
+REvil Ransomware Lab | CyberDefenders
+Overview
+
+This repository contains my complete writeup from the REvil - GOLD SOUTHFIELD lab on CyberDefenders. The lab simulates a real-world ransomware incident response scenario where I 
+investigate an encrypted machine using Splunk SIEM and Sysmon event logs to extract indicators of compromise and reconstruct the attack chain.
+
+Scenario
+
+As a Threat Hunter for a cybersecurity consulting firm, I analyzed one of several machines encrypted in a ransomware attack. The affected users reported ransom notes on their desktops 
+and changed background images. My task was to use Splunk to extract as much information as possible about the attack.
+Key Findings
+
+Through the investigation, I answered six core questions:
+
+    Ransom Note Filename — Identified the note left behind by the ransomware
+    Process ID — Pinpointed the ransomware's process ID from event logs
+    Executable Location — Located the ransomware executable and identified the attack vector
+    Shadow Copy Deletion — Deobfuscated a Base64-encoded PowerShell command disabling system recovery
+    SHA256 Hash — Extracted and validated the ransomware hash against threat intelligence
+    C2 Domain — Identified the attacker's Tor-based command and control infrastructure using VirusTotal and AnyRun
+
+Skills Practiced
+
+    Splunk querying and log analysis
+    Sysmon event log investigation
+    Base64 deobfuscation and command analysis
+    Hash validation and threat intelligence correlation
+    Attack timeline reconstruction
+    IOC identification and verification
+
+What I Learned
+
+This lab reinforced practical SOC workflow: moving between SIEM queries and external threat intelligence platforms to validate findings. 
+Leveraging built-in features like Splunk's Interesting Fields made investigation significantly more efficient than manual queries in this instance.
